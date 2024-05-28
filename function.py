@@ -45,7 +45,7 @@
 # addition_list(my_list)
 
 ## Return , when will you do  use return  before store data in varible
-# jb koi returns krati hai use variable me save krte hai then print krte hai ya fir directly prin kra skte hai
+# jb koi returns krati hai use variable me save krte hai then print krte hai ya fir directly print kra skte hai
 
 ## jab koi variable dega use return krna pdega or use return karne ke liy ak object ko varialble me store krna hoga
 
@@ -179,30 +179,41 @@
 
 '''When use return and print'''
 
-def Addition(num1,num2):#1,6
-    total = num1 + num2#7
-    print(total)#8
-    return total#9
+# def Addition(num1,num2):#1,6
+#     total = num1 + num2#7
+#     print(total)#8
+#     return total#9
     
 
-x = int(input("Enter a  first number:==  "))#2
-y = int(input("Enter a  first number:== "))#3
+# x = int(input("Enter a  first number:==  "))#2
+# y = int(input("Enter a  first number:== "))#3
 
 # d = Addition(x, y) 
 
-def Check(num):#4,11
-    if num%2 == 0:#12
-        # print("Even")
-        return "Even"
-    else:
-        # print("Odd")
-        return "Odd"
+# def Check(num):#4,11
+#     if num%2 == 0:#12
+#         # print("Even")
+#         return "Even"
+#     else:
+#         # print("Odd")
+#         return "Odd"
 
-# print(Addition(x,y))
-d = Addition(x,y)#5   d = ak alias hai
-c =Check(d)#10
+# # print(Addition(x,y))
+# d = Addition(x,y)#5   d = ak alias hai
+# c =Check(d)#10
 
-print(c)
+# print(c)
 
 # or
 # print(Check(d))
+
+
+# def student():
+#     first_name = input("Eneter your first name: =")
+#     last_name = input("Eneter your last name: =")
+#     # print(first_name, last_name)
+#     return first_name, last_name
+
+# x = student()
+# print(x)
+

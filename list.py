@@ -15,6 +15,8 @@
 l2 = [ ]
 
 l3 = ["Korwadih", "Garhwa", "Kalyanpur", "Chiniyan"]
+print(l3)
+
 
 l4 = [10,"Saif",3+4j,True,7.8]
 
