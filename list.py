@@ -12,10 +12,10 @@
 
 
 
-l2 = [ ]
+# l2 = [ ]
 
-l3 = ["Korwadih", "Garhwa", "Kalyanpur", "Chiniyan"]
-print(l3)
+# l3 = ["Korwadih", "Garhwa", "Kalyanpur", "Chiniyan"]
+# print(l3)
 
 
 l4 = [10,"Saif",3+4j,True,7.8]
@@ -218,14 +218,35 @@ list1 = [1, 6, 2, 3, 5, 4,6,6]
 
 a = 'aabcccaaabccc'
 
-obj1 = ''
-#output = a2b1c3a3b1c3
+# obj1 = ''
+# #output = a2b1c3a3b1c3
 
-for i in a:
-    if i not in obj1:
-        obj1 = obj1 + i + str(a.count(i))
+# for i in a:
+#     if i not in obj1:
+#         obj1 = obj1 + i + str(a.count(i))
 
-print(obj1)
+# print(obj1)
 
 
+# x = ["Cat", "Dog", "Elephant", "Fox", "Tiger", "Lion", "Ponda"]
 
+# for i,j in enumerate(x):
+#     if i not in  (0,4,5):
+#         print(j, end=',')
+
+# y = [7,32,81,20,25,14,23,27]
+
+# for z in y:
+#     if z %2!= 0 :
+#         print(z)
+
+# from random import shuffle
+# animal = ["Cat", "Dog", "Elephant", "Fox", "Tiger", "Lion", "Ponda"]
+# shuffle(animal)
+# print(animal)
+
+l = list()
+for i in range(11,25):
+	l.append(i**2)
+print(l[:5])
+print(l[-5:])

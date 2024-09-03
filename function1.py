@@ -70,4 +70,15 @@
 #4. With Parameters , with Return
 
 
+#7. Write a Python program to check a list is empty or not
 
+
+
+x = [34,45,6,5,4,56,7]
+
+a = []
+
+if not a :
+    print("List is empty")
+else:
+    print("List is empty")

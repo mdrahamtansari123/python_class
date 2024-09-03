@@ -1,3 +1,173 @@
+# Functios notes:
+
+# What is namespace 
+# a1 = 10
+# a2 = 20
+# a3 = 30
+# a4 = 40
+# print(id(a1), id(a2), id(a3))
+
+# types of namespace
+#1. Built-in namespace:= Built-in namespace jb kam krta hai tb hm python interpreter start karte hai Exmaple:= dir()
+#2. Module-level/global namespace := ye yesa module namespace hota hai jo module ko import krne ka kam karte hai
+
+# Example:== example.py
+
+# def example():
+    #print("This is example")
+
+# display.py
+
+# def display():
+#   print("display")
+
+# mai.py
+
+# import example, display
+# print(example.display())
+
+#3. Local namespace:=   ye namespace function or classes ke liy hota hai
+
+# Example:== 
+# a=50
+# def func1():
+#     a = 10
+#     def func3():
+#         b = 20
+#         print(dir())
+#     print(dir())
+#     func3()
+# def func2():
+#     a = 20
+
+# print(dir())
+# func1()
+
+
+# #4. Enclosed namespace
+
+# # Video
+# # LEGB = Local , Enclosed , Global, Builtin
+
+# # 1. Example
+# x = 100  # global variable
+# def outer():
+#     global x
+#     x = x+20
+#     print(x)
+#     x = 20  # local variable
+#     print(x)
+
+# outer()
+
+# # 2. Example
+
+# x = 100
+# def outer():
+#     x = 0 # Non Local variable
+
+#     def inner():
+#         nonlocal x
+        
+#         x = x+200  # Non Local variable ya Enclosed variable
+#         print(x)
+
+#         x = 20 # locals  variable
+#         print(x)
+#     inner()
+
+# outer()
+
+## 3 video
+
+# How function Work
+
+# def outer():
+#     x = 100
+#     print("Hello World")
+#     def inner():
+#         print("This is inner")
+
+#     inner()
+# outer()
+
+# Aliasing function
+
+# def outer():
+#     x = 100
+#     print("Hello World")
+#     def inner():
+#         print("This is inner")
+
+#     inner()
+# new = outer  # this alias function
+# new()
+# outer()
+
+# Closures in python function
+
+# def outer():
+#     def inner():
+#         x = 200
+#         return x
+#     return inner()
+# print(outer())
+
+# def outer():
+#     x = 900
+#     print(x)
+#     def inner():
+#         x = 200
+#         return x
+#     return inner
+# new = outer()
+# print(new())
+
+## video 4
+
+# Decorator for video
+
+# def decor(outer):
+#     def inner():
+#         x = outer()
+#         print("Decorator for video")
+#         return x
+#     return inner
+        
+
+# @decor
+# def outer():
+#     print("This outer")
+   
+    
+# decor = outer()
+# print(decor)
+
+def shout(text): 
+    return text.lower() 
+
+def whisper(text):
+    
+    return text.upper()
+
+print(whisper('hello')) 
+print(shout('HELLO')) 
+
+def greet(func): 
+    # storing the function in a variable 
+    greeting = func("""Hi, I am created by a function passed as an argument.""") 
+    print (greeting)
+def student(name):
+    student = name(input("Enter Your Student Name :=  "))
+    print (student)
+    # return  student
+
+greet(shout)
+greet(whisper) 
+student(whisper)
+
+
+
 # def addition():
 
 # # in this part scoping
@@ -27,7 +197,7 @@
 
 # Example
 
-# def addition(num1,num2,): # this parameters
+# def addition(num1,num2): # this parameters
 #      total_number = num1+num2
 #      print(total_number)
 
@@ -45,7 +215,7 @@
 # addition_list(my_list)
 
 ## Return , when will you do  use return  before store data in varible
-# jb koi returns krati hai use variable me save krte hai then print krte hai ya fir directly print kra skte hai
+# jb koi returns krat hai use variable me save krte hai then print krte hai ya fir directly print kra skte hai
 
 ## jab koi variable dega use return krna pdega or use return karne ke liy ak object ko varialble me store krna hoga
 
@@ -53,9 +223,9 @@
 
 # def add1(num1,num2):
 #      total = num1+num2
-#     #  return total
-#      print(total)
-# add1(23,45) ##This is no print
+#      return total
+#     #  print(total)
+# # add1(23,45) ##This is no print
 
 # s1 = add1(12,34)
 # print(s1)
@@ -217,3 +387,102 @@
 # x = student()
 # print(x)
 
+
+
+## sub ,add,mul
+
+# def sum2(num1, num2):
+#     total = num1+num2
+#     return total
+
+# def sub(num1, num2):
+#     total = num1-num2
+#     return total
+
+# def mul(num1, num2):
+#     total = num1*num2
+#     return total
+
+# def cheak(total):
+#     if total%2 == 0:
+#         print("Even")
+#     else:
+#         print("Odd")
+        
+# num1 = int(input("Enter the number first number: == "))
+# num2 = int(input("Enter the number first number: == "))
+
+# x = sum2(num1, num2)
+# y = mul(num1, num2)
+# z = sub(num1, num2)
+
+# print(x)
+# print(y)
+# print(z)
+
+# cheak(x)
+# cheak(y)
+# cheak(z)
+
+
+# fonction code
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Cannot divide by zero!"
+    return a / b
+
+# Dictionary mapping operation names to functions
+operations = {
+    "add": add,
+    "subtract": subtract,
+    "multiply": multiply,
+    "divide": divide
+}
+
+# Example usage
+a = 10
+b = 5
+operation = "multiply"
+result = operations[operation](a, b)
+print(result)  # Output: 50
+
+
+
+def square(x):
+    return x * x
+
+def cube(x):
+    return x * x * x
+
+def apply_function(func, value):
+    return func(value)
+
+# Applying functions
+print(apply_function(square, 3))  # Output: 9
+print(apply_function(cube, 3))    # Output: 27
+
+def greet(name):
+    return f"Hello, {name}!"
+
+def farewell(name):
+    return f"Goodbye, {name}!"
+
+# Storing functions in a list
+func_list = [greet, farewell]
+
+# Calling functions from the list
+for func in func_list:
+    print(func("Dave"))
+# Output:
+# Hello, Dave!
+# Goodbye, Dave!
